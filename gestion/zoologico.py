@@ -30,15 +30,15 @@ class Zoologico():
         self._nombre = nombre
 
     # Métodos get y set para _ubicacion
-    def get_ubicacion(self):
+    def getUbicacion(self):
         return self._ubicacion
 
-    def set_ubicacion(self, ubicacion):
+    def setUbicacion(self, ubicacion):
         self._ubicacion = ubicacion
 
     # Métodos get y set  para _zonas
-    def get_zonas(self):
+    def getZona(self):
         return self._zonas
 
-    def set_zonas(self, zonas):
+    def setZona(self, zonas):
         self._zonas = zonas
