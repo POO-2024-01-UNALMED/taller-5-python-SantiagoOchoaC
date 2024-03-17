@@ -17,15 +17,23 @@ class Animal():
 
     @classmethod
     def totalPorTipo(cls):
-        return "Mamiferos: " + mamifero.Mamifero.cantidadMamiferos + "\nAves: " + ave.Ave.cantidadAves + "\nReptiles: " + reptil.Reptil.cantidadReptiles + "\nPeces: " + pez.Pez.cantidadPeces + "\nAnfibios: " + anfibio.Anfibio.cantidadAnfibios
+        return "Mamiferos : " + mamifero.Mamifero.cantidadMamiferos() + "\nAves : " + ave.Ave.cantidadAves() + "\nReptiles : " + reptil.Reptil.cantidadReptiles() + "\nPeces : " + pez.Pez.cantidadPeces() + "\nAnfibios : " + anfibio.Anfibio.cantidadAnfibios()
 
     def toString(self):
         if (self._zona != None):
-            return "Mi nombre es " + self.getNombre + ", tengo una edad de " + self.getEdad + ", habito en " + self.getHabitat + " y mi genero es " + self.getGenero + ", la zona en la que me ubico es " + self._zona.getNombre() + ", en el " + self._zona.getZoo
+            return "Mi nombre es " + self.getNombre() + ", tengo una edad de " + self.getEdad() + ", habito en " + self.getHabitat() + " y mi genero es " + self.getGenero() + ", la zona en la que me ubico es " + self._zona.getNombre() + ", en el " + self._zona.getZoo()
         else:
-            return "Mi nombre es " + self.getNombre + ", tengo una edad de " + self.getEdad + ", habito en " + self.getHabitat + " y mi genero es " + self.getGenero
+            return "Mi nombre es " + self.getNombre() + ", tengo una edad de " + self.getEdad() + ", habito en " + self.getHabitat() + " y mi genero es " + self.getGenero()
 
-    # Métodos get y set
+    # Métodos get y set 
+    @classmethod
+    def getTotalAnimales(cls):
+        return cls._totalAnimales
+
+    @classmethod
+    def setTotalAnimales(cls, valor):
+        cls._totalAnimales = valor
+
     # Métodos get y set para _nombre
     def getNombre(self):
         return self._nombre

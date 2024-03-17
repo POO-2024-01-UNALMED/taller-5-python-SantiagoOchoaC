@@ -40,7 +40,7 @@ class Mamifero(Animal):
         cls._listado = listado
 
     # Métodos get y set _pelaje
-    def getPelaje(self):
+    def isPelaje(self):
         return self._pelaje
 
     def setPelaje(self, pelaje):
