@@ -1,4 +1,3 @@
-#from zooAnimales.mamifero import Mamifero
 from zooAnimales import mamifero, ave, reptil, pez, anfibio
 
 class Animal():
@@ -17,7 +16,7 @@ class Animal():
         return "desplazarse"
 
     @classmethod
-    def totalPorTipo(self):
+    def totalPorTipo(cls):
         return "Mamiferos: " + mamifero.Mamifero.cantidadMamiferos + "\nAves: " + ave.Ave.cantidadAves + "\nReptiles: " + reptil.Reptil.cantidadReptiles + "\nPeces: " + pez.Pez.cantidadPeces + "\nAnfibios: " + anfibio.Anfibio.cantidadAnfibios
 
     def toString(self):
